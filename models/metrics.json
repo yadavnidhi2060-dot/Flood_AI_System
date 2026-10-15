@@ -1,0 +1,183 @@
+{
+  "data_source": "SAMPLE (synthetic)",
+  "trained_at": "2026-10-15T08:13:55",
+  "best_model": "Random Forest",
+  "split": {
+    "train_rows": 10515,
+    "test_rows": 2631,
+    "train_start": "2012-01-01",
+    "train_end": "2021-08-05",
+    "test_start": "2021-08-06",
+    "test_end": "2023-12-30"
+  },
+  "class_counts_train": {
+    "Low": 9895,
+    "Medium": 429,
+    "High": 191
+  },
+  "class_counts_test": {
+    "Low": 2323,
+    "Medium": 192,
+    "High": 116
+  },
+  "features": [
+    "rainfall_mm",
+    "rain_3d_mm",
+    "rain_7d_mm",
+    "rain_14d_mm",
+    "river_level_m",
+    "level_change_1d_m",
+    "level_to_warning_m",
+    "temperature_c",
+    "humidity_pct",
+    "month_sin",
+    "month_cos"
+  ],
+  "models": {
+    "Baseline (majority class)": {
+      "accuracy": 0.8829342455340174,
+      "balanced_accuracy": 0.3333333333333333,
+      "precision_macro": 0.2943114151780058,
+      "recall_macro": 0.3333333333333333,
+      "f1_macro": 0.3126093392544745,
+      "f1_weighted": 0.8280404733046115,
+      "per_class": {
+        "Low": {
+          "precision": 0.8829342455340174,
+          "recall": 1.0,
+          "f1-score": 0.9378280177634235,
+          "support": 2323.0
+        },
+        "Medium": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 192.0
+        },
+        "High": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 116.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          2323,
+          0,
+          0
+        ],
+        [
+          192,
+          0,
+          0
+        ],
+        [
+          116,
+          0,
+          0
+        ]
+      ],
+      "cv_f1_macro_train": 0.3217214339962407,
+      "best_params": null
+    },
+    "Logistic Regression": {
+      "accuracy": 0.8540478905359179,
+      "balanced_accuracy": 0.7160234342399757,
+      "precision_macro": 0.6027609683582059,
+      "recall_macro": 0.7160234342399757,
+      "f1_macro": 0.6316997801107814,
+      "f1_weighted": 0.879458585863274,
+      "per_class": {
+        "Low": {
+          "precision": 0.9941719281204469,
+          "recall": 0.8811881188118812,
+          "f1-score": 0.9342765860337745,
+          "support": 2323.0
+        },
+        "Medium": {
+          "precision": 0.30248306997742663,
+          "recall": 0.6979166666666666,
+          "f1-score": 0.4220472440944882,
+          "support": 192.0
+        },
+        "High": {
+          "precision": 0.5116279069767442,
+          "recall": 0.5689655172413793,
+          "f1-score": 0.5387755102040817,
+          "support": 116.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          2047,
+          262,
+          14
+        ],
+        [
+          9,
+          134,
+          49
+        ],
+        [
+          3,
+          47,
+          66
+        ]
+      ],
+      "cv_f1_macro_train": 0.5300781205133805,
+      "best_params": null
+    },
+    "Random Forest": {
+      "accuracy": 0.9315849486887116,
+      "balanced_accuracy": 0.6863727531861131,
+      "precision_macro": 0.7906996540839956,
+      "recall_macro": 0.6863727531861131,
+      "f1_macro": 0.6952453487106952,
+      "f1_weighted": 0.9293543862975225,
+      "per_class": {
+        "Low": {
+          "precision": 0.9763237193284546,
+          "recall": 0.9763237193284546,
+          "f1-score": 0.9763237193284546,
+          "support": 2323.0
+        },
+        "Medium": {
+          "precision": 0.5513307984790875,
+          "recall": 0.7552083333333334,
+          "f1-score": 0.6373626373626373,
+          "support": 192.0
+        },
+        "High": {
+          "precision": 0.8444444444444444,
+          "recall": 0.3275862068965517,
+          "f1-score": 0.4720496894409938,
+          "support": 116.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          2268,
+          55,
+          0
+        ],
+        [
+          40,
+          145,
+          7
+        ],
+        [
+          15,
+          63,
+          38
+        ]
+      ],
+      "cv_f1_macro_train": 0.6632563340089077,
+      "best_params": {
+        "max_depth": 14,
+        "min_samples_leaf": 2,
+        "n_estimators": 200
+      }
+    }
+  }
+}
